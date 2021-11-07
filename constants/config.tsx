@@ -46,17 +46,17 @@ export const TECHNOLOGIES = {
     {
       title: "Front-End",
       body: "Experience with React.js, Next.js, and Redux for state management.",
-      img: "",
+      img: "/images/atom.png",
     },
     {
       title: "Back-End",
       body: "Experience with Node.js and Databases such as MongoDb, Firebase, and SQL.",
-      img: "",
+      img: "/images/server.png",
     },
     {
       title: "UI / UX",
       body: "Experience with working on design tools like Figma, InVision, and AdobeXd",
-      img: "",
+      img: "/images/ux.png",
     },
   ],
 };

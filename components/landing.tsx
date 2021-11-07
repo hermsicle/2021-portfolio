@@ -9,7 +9,7 @@ const Landing: FC = () => {
     <Section>
       <div className="landing">
         <div className="landing-details">
-          <h1 className="landing-title">Hi! 👋🏻</h1>
+          <h1 className="landing-title">Hi! 👋🏻</h1> 
           <br />
           <h1 className="landing-title">I'm Herman</h1>
           <br />

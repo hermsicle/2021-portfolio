@@ -37,12 +37,14 @@
     }
   }
   @media (min-width: $lg) {
+    width: 80%;
+    margin: 0 auto;
     .landing-details {
-      width: 40%;
+      width: 50%;
     }
     .animated-bg {
       height: 80%;
-      width: 60%;
+      width: 50%;
     }
   }
 }
