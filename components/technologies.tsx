@@ -12,8 +12,14 @@ const Technologies: FC = () => {
         <h1>Technologies</h1>
         <h2> {subtitle} </h2>
         <div className="tech-container">
-          {stack?.map(({ title, body, img }, i) => (
-            <TechCard title={title} body={body} img={img} key={i} />
+          {stack?.map(({ title, body, img, technologies }, i) => (
+            <TechCard
+              title={title}
+              body={body}
+              img={img}
+              key={i}
+              technologies={technologies}
+            />
           ))}
         </div>
       </div>

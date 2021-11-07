@@ -4,14 +4,67 @@
   border: $border;
 
   .tech-container {
-    .tech-card {
-      background: $background2;
-      margin: 1rem auto;
-      padding: 1rem;
+    .scene {
+      width: 100%;
       max-width: 550px;
-      img {
-        height: 30px;
-        width: 30px;
+      margin: 1rem auto;
+      perspective: 600px;
+      height: 200px;
+
+      .tech-card-wrapper.is-flipped {
+        transform: rotateY(180deg);
+      }
+
+      .tech-card-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 1s ease-in-out;
+        transform-style: preserve-3d;
+        box-shadow: 0px 0px 8px 1px $background2;
+
+        .tech-card {
+          backface-visibility: hidden;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+        }
+        .tech-card.front {
+          background: $background2;
+          padding: 1rem;
+          width: 100%;
+
+          img {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 1rem;
+          }
+          .tech-card-title {
+            margin-bottom: 1rem;
+          }
+        }
+        .tech-card.back {
+          transform: rotateY(180deg);
+          background: $background2;
+          padding: 1rem;
+          .tech-card-title {
+            // color: $primary2;
+          }
+          .tech-list {
+            display: flex;
+            width: 100%;
+            height: 90%;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            .tech-icon {
+              height: 50px;
+              width: 50px;
+              margin: 0.5rem;
+              filter: drop-shadow(0 0 0.75rem $primary2);
+            }
+          }
+        }
       }
     }
   }
@@ -19,22 +72,8 @@
     .tech-container {
       display: flex;
       justify-content: space-between;
-      .tech-card {
+      .scene {
         width: 32%;
-        padding: 1rem;
-        max-width: 550px;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        img {
-          height: 40px;
-          width: 40px;
-          margin-bottom: 1rem;
-        }
-        .tech-card-title {
-          margin-bottom: 1rem;
-        }
       }
     }
   }
