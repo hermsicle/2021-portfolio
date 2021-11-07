@@ -1,0 +1,52 @@
+@import "./globals.scss";
+
+.projects {
+  // border: $border;
+  .projects-container {
+    .card {
+      margin-bottom: 25px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-content: center;
+      // box-shadow: 0px 0px 10px 0.5px $primary1;
+
+      img {
+        height: 100%;
+        width: 100%;
+        max-width: 550px;
+        object-fit: contain;
+      }
+      .read-more {
+        position: absolute;
+        z-index: 2;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  @media (min-width: $md) {
+    .projects-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      overflow: visible;
+      .card {
+        width: 49%;
+        box-shadow: 0px 0px 10px 0.5px $primary1;
+      }
+    }
+  }
+  @media (min-width: $lg) {
+    .projects-container {
+      .card {
+        width: 24%;
+      }
+      .read-more {
+        width: 150px;
+      }
+    }
+  }
+}

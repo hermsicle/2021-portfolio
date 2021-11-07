@@ -1,9 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap");
+
+$primary1: hsl(204, 23.8%, 95.9%);
+$primary2: #0f1624;
+$background1: #0f1624;
+$accent1: hsl(34.9, 98.6%, 72.9%);
+$button: hsl(205.1, 100%, 36.1%);
+$background2: hsl(232.7, 27.3%, 23.7%);
+$border: 1px solid white;
+$border-radius: 20px;
+
+$bg1: linear-gradient(
+  121.57deg,
+  #ffffff 18.77%,
+  rgba(255, 255, 255, 0.66) 60.15%
+);
+
+$transition: all 250ms ease-in-out;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  background-color: $background1;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 a {
@@ -15,4 +33,71 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  color: $primary1;
+  font-size: clamp(40px, 2.5vw, 50px);
+  text-transform: uppercase;
+  background: $bg1;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  color: $primary1;
+  font-size: clamp(25px, 1.5vw, 50px);
+}
+
+p {
+  color: $primary1;
+  font-size: clamp(16px, 1.5vw, 18px);
+}
+
+// breakpoints
+$sm: 250px;
+$md: 768px;
+$lg: 1024px;
+$xlg: 1280px;
+
+.section {
+  width: 100%;
+  padding: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  // min-height: 100vh;
+}
+
+.button-1 {
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: $border-radius;
+  background: $button;
+  color: $primary1;
+  transition: $transition;
+  cursor: pointer;
+  transform: scale(1);
+  &:hover {
+    background: $accent1;
+    color: $primary2;
+    transform: scale(1.1);
+  }
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
 }
